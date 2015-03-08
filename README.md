@@ -7,6 +7,13 @@ The following is the installation guide of how to setup the settings
 cd ~
 git clone https://github.com/mike820324/vimrc.git .vim
 ln -s ~/.vim/vimrc ~/.vimrc
+
+# install neobundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+
+# or manually
+mkdir -p ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
 # Features
