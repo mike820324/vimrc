@@ -3,40 +3,52 @@ I am a vim lover and I use vim for a very long time. This repo is my vimrc file 
 
 # Installation
 The following is the installation guide of how to setup the settings
->cd ~
->git clone https://github.com/mike820324/vimrc.git .vim
->ln -s ~/.vim/vimrc ~/.vimrc
+```bash
+cd ~
+git clone https://github.com/mike820324/vimrc.git .vim
+ln -s ~/.vim/vimrc ~/.vimrc
+```
 
 # Features
 ## Help 
-Keymapping Menu
->,h
-Features Menu
->,,
+```
+Keymapping Guide:
+key: ,h
+Fast Command Menu:
+key: ,,
+```
 
 ## Project Layout
->,pco
->,pdt
->,put
->,pce
+```
+key: ,pco
+key: ,pdt
+key: ,put
+key: ,pce
+```
+
 
 ## File Search
->,ff
->,fm
->,fg
+```
+key: ,ff
+key: ,fm
+key: ,fg
+```
 
 ## Buffer and Window Navigations
 ### Buffer Navigations
->,bt
->,bj
->,bk
->,bq
-
+```
+key: ,bt
+key: ,bj
+key: ,bk
+key: ,bq
+```
 ### Window Navigations
->,wj
->,wk
->,wh
->,wl
->,wq
+```
+key: ,wj
+key: ,wk
+key: ,wh
+key: ,wl
+key: ,wq
+```
 
 
