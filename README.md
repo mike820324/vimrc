@@ -35,13 +35,20 @@ key: ,pce
 
 
 ## File Search
+All the file related search is using the Unite.vim plugin. The following is the keymappings.
+>I strongly prefer compiling vim with lua and luajit enable.
+
 ```
-key: ,ff
-key: ,fm
-key: ,fg
+key: ,ff (file search)
+key: ,fm (most recent use file search)
+key: ,fg (file grep search)
 ```
 
 ## Buffer and Window Navigations
+Instead of using tabs, the airline.vim have present a great features called tabline, 
+which will show the buffers that you are using on the very top of your vim window.
+But the problem is that there is no keymapping for moving around the Buffer, so here is my keymappings.
+
 ### Buffer Navigations
 ```
 key: ,bt
@@ -49,6 +56,7 @@ key: ,bj
 key: ,bk
 key: ,bq
 ```
+
 ### Window Navigations
 ```
 key: ,wj
