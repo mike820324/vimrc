@@ -53,7 +53,7 @@ let g:unite_source_menu_menus = {}
         \ 'description' : 'create a interactive shell in a seperate window'
     \}
     let g:unite_source_menu_menus.shell.command_candidates = [
-        \['▷ popup shell                    nomapping..', ':VimShellPop --split="split"'],
+        \['▷ popup shell                    nomapping..', ':VimShellPop'],
         \['▷ popup node shell               nomapping..', ':VimShellInteractive --split="split" node'],
         \['▷ popup python shell             nomapping..', ':VimShellInteractive --split="split" python'],
     \]
@@ -96,22 +96,20 @@ let g:unite_source_menu_menus = {}
 
     " use ag instead of the default grep
     if executable('ag')
+        "let g:unite_source_rec_async_command = '""ag --follow --nocolor --nogroup --hidden -g""'
         let g:unite_source_grep_command = 'ag'
         let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --ignore=*.pyc --ignore=*.o --ignore=*.ko'
-        let g:unite_source_grep_recursive_opt = ''
-        let g:unite_source_grep_search_word_highlight=1
     elseif executable('awk')
         let g:unite_source_grep_command='ack'
         let g:unite_source_grep_default_opts='--no-group --no-color'
-        let g:unite_source_grep_recursive_opt=''
-        let g:unite_source_grep_search_word_highlight=1
     endif
 
     " basic config for unite
     let g:unite_source_rec_max_cache_files = 5000
     let g:unite_source_history_yank_enable=1
     let g:unite_source_history_yank_limit=10000
-    let g:unite_source_rec_async_command = '""ag --follow --nocolor --nogroup --hidden -g""'
+    let g:unite_source_grep_recursive_opt = ''
+    let g:unite_source_grep_search_word_highlight=1
 
 " }}}
 
