@@ -58,6 +58,7 @@
 " }}}
 
 " window-navigation {{{
+    nnoremap <silent><leader>wn <C-w>n
     nnoremap <silent><leader>wj <C-w>j
     nnoremap <silent><leader>wk <C-w>k
     nnoremap <silent><leader>wh <c-w>h
