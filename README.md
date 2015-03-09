@@ -32,12 +32,20 @@ key: ,,
 screen cast of Fast Command Menu
 
 ![Command Menu Screen](http://i.imgur.com/AIvpcXU.gif)
+
 ## Project Layout
+A Project layout related commands use the following plugins:
+* VimFiler : Project Directory Layout
+* TagBar : Source Code Layout
+* UndoTree : vim undo tree layout
+* Syntastic : Syntastic Checker
+
+KeyMappings: 
 ```
-key: ,pco
-key: ,pdt
-key: ,put
-key: ,pce
+key: ,pco (TagBar toggle)
+key: ,pdt (VimFiler toggle)
+key: ,put (UndoTree toggle)
+key: ,pce (Syntastic check)
 ```
 
 
