@@ -34,13 +34,14 @@ screen cast of Fast Command Menu
 ![Command Menu Screen](http://i.imgur.com/AIvpcXU.gif)
 
 ## Project Layout
+#### Description:
 A Project layout related commands use the following plugins:
 * VimFiler : Project Directory Layout
 * TagBar : Source Code Layout
 * UndoTree : vim undo tree layout
 * Syntastic : Syntastic Checker
 
-KeyMappings: 
+#### KeyMappings: 
 ```
 key: ,pco (TagBar toggle)
 key: ,pdt (VimFiler toggle)
@@ -48,6 +49,15 @@ key: ,put (UndoTree toggle)
 key: ,pce (Syntastic check)
 ```
 
+#### Screen Cast:
+- VimFiler
+![Imgur](http://i.imgur.com/BGdTYkM.png)
+- TarBar
+![Imgur](http://i.imgur.com/gKsXEMc.png?1)
+- UndoTree
+![Imgur](http://i.imgur.com/TIhiOf1.png)
+- Syntastic Error Checking
+![Imgur](http://i.imgur.com/OjOB7lH.png)
 
 ## File Search
 All the file related search is using the Unite.vim plugin. The following is the keymappings.
