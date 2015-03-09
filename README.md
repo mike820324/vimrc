@@ -18,13 +18,20 @@ git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 # Features
 ## Help 
+Since this vimrc contains so many keymapping for different plugins. 
+I have mapped two keys to quick navigate through the commands of this vimrc.
+
+By typing ```<leader>h```, the unite mappings will show you the current keymapping of this editor.
+And by typing ```<leader>,```, a unite menu will pop up to you with the avaliable commands.
 ```
 Keymapping Guide:
 key: ,h
 Fast Command Menu:
 key: ,,
 ```
+screen cast of Fast Command Menu
 
+![Command Menu Screen](http://i.imgur.com/AIvpcXU.gif)
 ## Project Layout
 ```
 key: ,pco
