@@ -17,23 +17,30 @@ git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
 # Features
-## Help 
+## Outline:
+* [Help](#HelpSection)
+* [Project Layout](#ProjectLayoutSection)
+* [File Search](#FileSearchSection)
+* [Buffer/Window Navigation](#NavigationSection)
+ 
+
+## <a name="HelpSection"></a> Help 
+#### Description
 Since this vimrc contains so many keymapping for different plugins. 
 I have mapped two keys to quick navigate through the commands of this vimrc.
 
 By typing ```<leader>h```, the unite mappings will show you the current keymapping of this editor.
 And by typing ```<leader>,```, a unite menu will pop up to you with the avaliable commands.
-```
-Keymapping Guide:
-key: ,h
-Fast Command Menu:
-key: ,,
-```
-screen cast of Fast Command Menu
 
+#### KeyMappings:
+```
+key: ,h (Unite Keymappings view)
+key: ,, (Fast Command Menu)
+```
+#### Screencast:
 ![Command Menu Screen](http://i.imgur.com/AIvpcXU.gif)
 
-## Project Layout
+## <a name="ProjectLayoutSection"></a> Project Layout
 #### Description:
 A Project layout related commands use the following plugins:
 * VimFiler : Project Directory Layout
@@ -59,7 +66,7 @@ key: ,pce (Syntastic check)
 - Syntastic Error Checking
 ![Imgur](http://i.imgur.com/OjOB7lH.png)
 
-## File Search
+## <a name="FileSearchSection"></a> File Search
 All the file related search is using the Unite.vim plugin. The following is the keymappings.
 >I strongly prefer compiling vim with lua and luajit enable.
 
@@ -69,26 +76,27 @@ key: ,fm (most recent use file search)
 key: ,fg (file grep search)
 ```
 
-## Buffer and Window Navigations
+## <a name="NavigationSection"></a> Buffer and Window Navigations
+#### Description:
 Instead of using tabs, the airline.vim have present a great features called tabline, 
 which will show the buffers that you are using on the very top of your vim window.
 But the problem is that there is no keymapping for moving around the Buffer, so here is my keymappings.
 
-### Buffer Navigations
+#### KeyMappings:
+Buffer Navigations
 ```
-key: ,bt
-key: ,bj
-key: ,bk
-key: ,bq
-```
-
-### Window Navigations
-```
-key: ,wj
-key: ,wk
-key: ,wh
-key: ,wl
-key: ,wq
+key: ,bt (create a new buffer)
+key: ,bq (quit buffer)
+key: ,bj (next buffer)
+key: ,bk (prev buffer)
 ```
 
-
+Window Navigations
+```
+key: ,wn (create new window)
+key: ,wq (quit the current window)
+key: ,wj (move to bottom window)
+key: ,wk (move to upper window)
+key: ,wh (move to left window)
+key: ,wl (move to right window)
+```
