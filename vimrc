@@ -9,50 +9,15 @@
     call neobundle#begin(expand('~/.vim/bundle/'))     " Required
     NeoBundleFetch 'Shougo/neobundle.vim'             " Required
     
-    " vimproc
-    NeoBundle 'Shougo/vimproc.vim', {
-         \ 'build' : {
-         \     'windows' : 'tools\\update-dll-mingw',
-         \     'cygwin' : 'make -f make_cygwin.mak',
-         \     'mac' : 'make -f make_mac.mak',
-         \     'unix' : 'make -f make_unix.mak',
-         \    },
-         \ }
-    
-    " plugin for finding files
-    NeoBundle 'Shougo/unite.vim'           " buffer explorer
-    NeoBundle 'Shougo/neomru.vim'           " mru for unite
-    NeoBundle 'Shougo/vimfiler.vim'           " file explorer
-    
-    " plugin for tracing code
-    NeoBundle 'majutsushi/tagbar'           " source code navigator
-    NeoBundle 'Shougo/unite-outline'       " source code navigator
-    NeoBundle 'hewes/unite-gtags'           " gtag browser
-    NeoBundle 'tacroe/unite-mark'            " mark browser
-    NeoBundle 'Shougo/vimshell.vim'
-    
-    " plugin for productive of writing code
-    NeoBundle 'mbbill/undotree'               " undotree explorer
-    NeoBundle 'tpope/vim-fugitive'           " git binding 
-    NeoBundle 'jmcantrell/vim-virtualenv'  " virtualenv for python
-    NeoBundle 'scrooloose/syntastic'       " syntax checker
-    NeoBundle 'LeafCage/yankround.vim'       " yank reuse
-    NeoBundle 'osyo-manga/vim-over'           " fast substitude
-    NeoBundle 'rking/ag.vim'               " ag in vim
-    NeoBundle 'tpope/vim-commentary'       " quick comment
-    NeoBundle 'Shougo/neocomplcache'       " neocomplete
-    NeoBundle 'chrisbra/NrrwRgn'           " NrrRgn
-    NeoBundle 'Yggdroot/indentLine'        " indent indicator
-    
-    " plugin for cool
-    NeoBundle 'bling/vim-airline'            " status line prettify 
+    source ~/.vim/vim/plugins/fileSearch.vim
+    source ~/.vim/vim/plugins/traceCode.vim
+    source ~/.vim/vim/plugins/productive.vim
+    source ~/.vim/vim/plugins/layout.vim
 
     " Unused 
     " NeoBundle 'thinca/vim-quickrun'           
     " NeoBundle 'tsukkee/unite-tag'           
     
-    " vim color scheme
-    NeoBundle 'Lokaltog/vim-distinguished'
     call neobundle#end()
     
     filetype plugin indent on                         " Required
