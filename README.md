@@ -1,7 +1,20 @@
 # Introduction
 I am a vim lover and I use vim for a very long time. This repo is my vimrc file which contains some useful plugins and convinient keymapping for me.
 
-# Installation
+# Outline:
+* [Installation](#InstallSection)
+ * ![First Time](#FirstTimeSection) 
+ * ![Update](#UpdateSection)
+* [Feature](#FeatureSection)
+ * [Help](#HelpSection)
+ * [Project Layout](#ProjectLayoutSection)
+ * [File Search](#FileSearchSection)
+ * [Misc Search](#MiscSearchSection)
+ * [Buffer/Window Navigation](#NavigationSection)
+* [Q&A](#QandASection)
+
+# <a name="InstallSection"></a> Installation
+#### <a name="FirstTimeInstallSection"></a> First Time Installation
 The following is the installation guide of how to setup the settings
 ```bash
 cd ~
@@ -32,16 +45,14 @@ ln -s ~/.vim/vimrc ~/.vimrc
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 ```
+#### <a name="UpdateInstallSection"></a> Update
+To the lastest version:
+```bash
+cd ~/.vim
+git pull
+```
 
-# Outline:
-* [Help](#HelpSection)
-* [Project Layout](#ProjectLayoutSection)
-* [File Search](#FileSearchSection)
-* [Misc Search](#MiscSearchSection)
-* [Buffer/Window Navigation](#NavigationSection)
-* [Q&A](#QandASection)
- 
-# Features:
+# <a name="FeatureSection"></a> Features:
 ## <a name="HelpSection"></a> Help 
 #### Description
 Since this vimrc contains so many keymapping for different plugins. 
