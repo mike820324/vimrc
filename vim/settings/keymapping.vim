@@ -12,9 +12,9 @@
     " }}}
     
     " Misc Search {{{
-        nnoremap <silent><leader>bs :Unite buffer -winheight=5<CR>
+        nnoremap <silent><leader>bs :Unite buffer<CR>
         nnoremap <silent><leader>ms :Unite mark<CR>
-        nnoremap <silent><leader>ys :Unite -quick-match yankround<CR>
+        nnoremap <silent><leader>ys :Unite yankround<CR>
     " }}}
     
     " Code Search {{{
