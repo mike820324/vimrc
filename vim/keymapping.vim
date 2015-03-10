@@ -1,6 +1,6 @@
 " Unite-Mapping {{{
     nnoremap <silent><leader>, :Unite menu <CR>
-    nnoremap <silent><leader>h :Unite mappings <CR>
+    nnoremap <silent><leader>h :Unite mapping <CR>
     nnoremap <silent><leader>ff :Unite -buffer-name=files file_rec/async:!<CR>
     nnoremap <silent><leader>fm :Unite -buffer-name=files file_mru<CR>
     nnoremap <silent><leader>fg  :<C-u>Unite grep:. -buffer-name=grep <CR> 
