@@ -22,6 +22,16 @@ OR
 * rename to .vim
 * put to your home folder
 * soft link ~/.vimrc
+```bash
+wget https://github.com/mike820324/vimrc/archive/v1.0.tar.gz
+tar xvf v1.0.tar.gz
+mv vimrc-1.0 ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+
+# install neobundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+
+```
 
 # Features
 ## Outline:
