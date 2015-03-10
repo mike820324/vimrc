@@ -33,15 +33,15 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 
 ```
 
-# Features
-## Outline:
+# Outline:
 * [Help](#HelpSection)
 * [Project Layout](#ProjectLayoutSection)
 * [File Search](#FileSearchSection)
 * [Misc Search](#MiscSearchSection)
 * [Buffer/Window Navigation](#NavigationSection)
+* [Q&A](#QandASection)
  
-
+# Features:
 ## <a name="HelpSection"></a> Help 
 #### Description
 Since this vimrc contains so many keymapping for different plugins. 
@@ -133,4 +133,14 @@ key: ,wj (move to bottom window)
 key: ,wk (move to upper window)
 key: ,wh (move to left window)
 key: ,wl (move to right window)
+```
+
+## <a name="QandASection"></a> Q&A
+1. Error Message when using TarBar
+
+>Please download Exuberant Ctags from ctags.sourceforge.net and install it in a directory in your $PATH o
+r set g:tagbar_ctags_bin.
+
+```
+Since tagbar is using ctags to generate the tag files; therefore, if you want to use TagBar plugin, you should install ctags first.
 ```
