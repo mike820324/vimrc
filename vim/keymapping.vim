@@ -8,7 +8,7 @@
 
     nnoremap <silent><leader>bs :Unite buffer -winheight=5<CR>
     nnoremap <silent><leader>ms :Unite mark<CR>
-    nnoremap <silent><leader>y :Unite -quick-match -winwidth=10 yankround<CR>
+    nnoremap <silent><leader>ys :Unite -quick-match yankround<CR>
 
     nnoremap <leader>tgd :<C-u>Unite gtags/def:
     nnoremap <leader>tgr :Unite gtags/ref:

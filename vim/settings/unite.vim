@@ -35,6 +35,7 @@ let g:unite_source_menu_menus = {}
         \['▷ grep search               <leader>fg',     'normal ,fg'],
         \['▷ mark search               <leader>ms',     'normal ,ms'],
         \['▷ buffer search             <leader>bs',     'normal ,bs'],
+        \['▷ yank search               <leader>ys',     'normal ,ys'],
         \['▷ code search               <leader>tcs',    'normal ,tcs'],
     \]
 "}}}
