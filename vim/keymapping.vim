@@ -1,12 +1,13 @@
 " Unite-Mapping {{{
     nnoremap <silent><leader>, :Unite menu <CR>
+    nnoremap <silent><leader>h :Unite mappings <CR>
     nnoremap <silent><leader>ff :Unite -buffer-name=files file_rec/async:!<CR>
     nnoremap <silent><leader>fm :Unite -buffer-name=files file_mru<CR>
     nnoremap <silent><leader>fg  :<C-u>Unite grep:. -buffer-name=grep <CR> 
     nnoremap <silent><leader>fgg :<C-u>Unite grep:. -buffer-name=grep <CR><C-R><C-W>
 
     nnoremap <silent><leader>bs :Unite buffer -winheight=5<CR>
-    nnoremap <silent><leader>m :Unite mark<CR>
+    nnoremap <silent><leader>ms :Unite mark<CR>
     nnoremap <silent><leader>y :Unite -quick-match -winwidth=10 yankround<CR>
 
     nnoremap <leader>tgd :<C-u>Unite gtags/def:

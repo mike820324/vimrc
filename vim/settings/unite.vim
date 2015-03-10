@@ -27,12 +27,15 @@ let g:unite_source_menu_menus = {}
 
 " unite-menu-search {{{
     let g:unite_source_menu_menus.search = {
-        \ 'description' : '<leader> with f in front. Command related to searching files.'
+        \ 'description' : '<leader> with f in front. Command related to searching. Such as files, buffer, marks, functions...'
     \}
     let g:unite_source_menu_menus.search.command_candidates = [
-        \['▷ file search               <leader>ff', 'normal ,ff'],
-        \['▷ mru search                <leader>fm', 'normal ,fm'],
-        \['▷ grep search               <leader>fg', 'normal ,fg'],
+        \['▷ file search               <leader>ff',     'normal ,ff'],
+        \['▷ mru search                <leader>fm',     'normal ,fm'],
+        \['▷ grep search               <leader>fg',     'normal ,fg'],
+        \['▷ mark search               <leader>ms',     'normal ,ms'],
+        \['▷ buffer search             <leader>bs',     'normal ,bs'],
+        \['▷ code search               <leader>tcs',    'normal ,tcs'],
     \]
 "}}}
 
