@@ -21,6 +21,7 @@ git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 * [Help](#HelpSection)
 * [Project Layout](#ProjectLayoutSection)
 * [File Search](#FileSearchSection)
+* [Misc Search](#MiscSearchSection)
 * [Buffer/Window Navigation](#NavigationSection)
  
 
@@ -67,13 +68,29 @@ key: ,pce (Syntastic check)
 ![Imgur](http://i.imgur.com/OjOB7lH.png)
 
 ## <a name="FileSearchSection"></a> File Search
+#### Description:
 All the file related search is using the Unite.vim plugin. The following is the keymappings.
 >I strongly prefer compiling vim with lua and luajit enable.
 
+#### KeyMappings:
 ```
 key: ,ff (file search)
 key: ,fm (most recent use file search)
 key: ,fg (file grep search)
+```
+
+## <a name="MiscSearchSection"></a> Misc Search
+#### Description:
+Except the file search, I also mapped some useful functionalities in Unite.vim.
+* mark search : search through the vim marks currently added
+* buffer search : search through all the buffers
+* tag search : search the tag, very similar to tagbar but much more faster when you know the function name.
+
+#### KeyMappings:
+```
+key: ,ms (marks search)
+key: ,bs (buffer search)
+key: ,tcs (function search)
 ```
 
 ## <a name="NavigationSection"></a> Buffer and Window Navigations
