@@ -4,15 +4,16 @@
     
         " Required:
         set runtimepath+=~/.vim/bundle/neobundle.vim
+        set runtimepath+=~/.vim/vim/plugins/
     endif
     
     call neobundle#begin(expand('~/.vim/bundle/'))     " Required
     NeoBundleFetch 'Shougo/neobundle.vim'             " Required
     
-    source ~/.vim/vim/plugins/fileSearch.vim
-    source ~/.vim/vim/plugins/traceCode.vim
-    source ~/.vim/vim/plugins/productive.vim
-    source ~/.vim/vim/plugins/layout.vim
+    runtime fileSearch.neo
+    runtime traceCode.neo
+    runtime productive.neo
+    runtime layout.neo
 
     " Unused 
     " NeoBundle 'thinca/vim-quickrun'           
