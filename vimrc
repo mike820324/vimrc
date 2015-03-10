@@ -1,38 +1,5 @@
-" NeoBundle Plugin Manager {{{
-    if has('vim_starting')
-        set nocompatible
-        " Install neobundle if there is no 
-        let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
-        if !filereadable(neobundle_readme)
-            echo "Installing neobundle.vim."
-            echo ""
-            silent !mkdir -p ~/.vim/bundle
-            silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-            echo "Install complete"
-        endif
-
-        " Required:
-        set runtimepath+=~/.vim/bundle/neobundle.vim
-        set runtimepath+=~/.vim/vim/plugins/
-    endif
-    
-    call neobundle#begin(expand('~/.vim/bundle/'))     " Required
-    NeoBundleFetch 'Shougo/neobundle.vim'             " Required
-    
-    runtime fileSearch.neo
-    runtime traceCode.neo
-    runtime productive.neo
-    runtime layout.neo
-
-    " Unused 
-    " NeoBundle 'thinca/vim-quickrun'           
-    " NeoBundle 'tsukkee/unite-tag'           
-    
-    call neobundle#end()
-    
-    filetype plugin indent on                         " Required
-    NeoBundleCheck
-"}}}
+" ======= Neobundle Setup =======
+source ~/.vim/vim/neobundles.vim
 
 " ======= Genera Settings =======
 " general-setting {{{
@@ -81,15 +48,5 @@
     set wildignore+=*.so,*.exe,*.dll,*.ppt
 " }}}
 
-" external settings {{{
-    source ~/.vim/vim/settings/indentline.vim
-    source ~/.vim/vim/settings/airline.vim
-    source ~/.vim/vim/settings/syntastic.vim
-    source ~/.vim/vim/settings/unite.vim
-    source ~/.vim/vim/settings/undotree.vim
-    source ~/.vim/vim/settings/vimfiler.vim
-    source ~/.vim/vim/settings/neocompletecache.vim
-    source ~/.vim/vim/settings/virtualenv.vim
-    source ~/.vim/vim/settings/yankround.vim
-    source ~/.vim/vim/keymapping.vim
-" }}}
+" ======== External Plugins Setup =====
+source ~/.vim/vim/setting.vim
