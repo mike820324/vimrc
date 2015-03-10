@@ -81,5 +81,6 @@
     source ~/.vim/vim/settings/vimfiler.vim
     source ~/.vim/vim/settings/neocompletecache.vim
     source ~/.vim/vim/settings/virtualenv.vim
+    source ~/.vim/vim/settings/yankround.vim
     source ~/.vim/vim/keymapping.vim
 " }}}
