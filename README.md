@@ -1,6 +1,8 @@
 # Introduction
 I am a vim lover and I use vim for a very long time. This repo is my vimrc file which contains some useful plugins and convinient keymapping for me.
 
+If you encounter some problems, please refer to the Q&A sections. And if the Q&A section can not solve your problems, send a issue to me, I'll deal with it ASAP.
+
 # Outline:
 * [Installation](#InstallSection)
  * ![First Time](#FirstTimeSection) 
@@ -147,11 +149,16 @@ key: ,wl (move to right window)
 ```
 
 ## <a name="QandASection"></a> Q&A
-1. Error Message when using TarBar
+* Error Message when using TarBar
 
->Please download Exuberant Ctags from ctags.sourceforge.net and install it in a directory in your $PATH o
+```
+Please download Exuberant Ctags from ctags.sourceforge.net and install it in a directory in your $PATH o
 r set g:tagbar_ctags_bin.
+```
 
-```
-Since tagbar is using ctags to generate the tag files; therefore, if you want to use TagBar plugin, you should install ctags first.
-```
+>Since tagbar is using ctags to generate the tag files; therefore, if you want to use TagBar plugin, you should install ctags first.
+
+* There are some special character when using airline layout
+
+>Since I'm using airline powerline theme, and there are some special character in powerline theme. As a result, if you want to use the powerline theme, download the font from https://github.com/powerline/fonts and set up the font in your terminal. After that, the airline should work as what it expeted to be.
+
