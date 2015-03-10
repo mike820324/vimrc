@@ -15,6 +15,13 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 mkdir -p ~/.vim/bundle
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
+OR
+
+* download a compress file from [Release Page](https://github.com/mike820324/vimrc/releases)
+* decompress the downloaded file
+* rename to .vim
+* put to your home folder
+* soft link ~/.vimrc
 
 # Features
 ## Outline:
