@@ -15,16 +15,33 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 mkdir -p ~/.vim/bundle
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
+OR
 
-# Features
-## Outline:
+* download a compress file from [Release Page](https://github.com/mike820324/vimrc/releases)
+* decompress the downloaded file
+* rename to .vim
+* put to your home folder
+* soft link ~/.vimrc
+```bash
+wget https://github.com/mike820324/vimrc/archive/v1.0.tar.gz
+tar xvf v1.0.tar.gz
+mv vimrc-1.0 ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+
+# install neobundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+
+```
+
+# Outline:
 * [Help](#HelpSection)
 * [Project Layout](#ProjectLayoutSection)
 * [File Search](#FileSearchSection)
 * [Misc Search](#MiscSearchSection)
 * [Buffer/Window Navigation](#NavigationSection)
+* [Q&A](#QandASection)
  
-
+# Features:
 ## <a name="HelpSection"></a> Help 
 #### Description
 Since this vimrc contains so many keymapping for different plugins. 
@@ -116,4 +133,14 @@ key: ,wj (move to bottom window)
 key: ,wk (move to upper window)
 key: ,wh (move to left window)
 key: ,wl (move to right window)
+```
+
+## <a name="QandASection"></a> Q&A
+1. Error Message when using TarBar
+
+>Please download Exuberant Ctags from ctags.sourceforge.net and install it in a directory in your $PATH o
+r set g:tagbar_ctags_bin.
+
+```
+Since tagbar is using ctags to generate the tag files; therefore, if you want to use TagBar plugin, you should install ctags first.
 ```
