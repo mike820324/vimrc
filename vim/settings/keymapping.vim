@@ -78,7 +78,7 @@
 " vim-over-setting {{{
     nnoremap <silent><leader>s :OverCommandLine<CR>
     nnoremap <silent>sub :OverCommandLine<CR>%s/<C-r><C-w>//g<Left><Left>
-" }}
+" }}}
 
 " neocomplcache {{{ 
     inoremap <expr><C-g> neocomplcache#undo_completion()
@@ -91,4 +91,9 @@
     imap <C-k> <Plug>(neosnippet_expand_or_jump)
     smap <C-k> <Plug>(neosnippet_expand_or_jump)
     xmap <C-k> <Plug>(neosnippet_expand_target)
+
+    imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+    smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 " }}}
