@@ -13,10 +13,10 @@ let s:source = {
 \}
 
 function! s:source.gather_candidates(args, context) "{{{
-    let rc_version = rcUpdate:getVersions()
+    let rc_version = RCUpdate_getVersions()
     
     let candidates = []
-    let Fn_tag = function("rcUpdate:git:checkout:tag")
+    let Fn_tag = function("RCUpdate_git_checkout_tag")
     for tag in rc_version.tag
         let candidate = {
 \           'word': tag,
@@ -27,7 +27,7 @@ function! s:source.gather_candidates(args, context) "{{{
         call add(candidates, candidate)
     endfor
     
-    let Fn_branch = function("rcUpdate:git:checkout:branch")
+    let Fn_branch = function("RCUpdate_git_checkout_branch")
     for branch in rc_version.branch
         let candidate = {
 \           'word': branch,
@@ -57,21 +57,21 @@ endfunction"}}}
 
 let s:source.action_table.common = s:action_table
 
-function! rcUpdate:git:pull() "{{{
+function! RCUpdate_git_pull() "{{{
     call vimproc#system_bg("git pull")
 endfunction "}}}
 
-function! rcUpdate:git:checkout:tag(tag_version) "{{{
+function! RCUpdate_git_checkout_tag(tag_version) "{{{
     let command = "git checkout tags/" . a:tag_version
-    call rcUpdate:git:checkout(command)
+    call RCUpdate_git_checkout(command)
 endfunction "}}}
 
-function! rcUpdate:git:checkout:branch(branch_name) "{{{
+function! RCUpdate_git_checkout_branch(branch_name) "{{{
     let command = "git checkout " . a:branch_name
-    call rcUpdate:git:checkout(command)
+    call RCUpdate_git_checkout(command)
 endfunction "}}}
 
-function! rcUpdate:git:checkout(command) "{{{
+function! RCUpdate_git_checkout(command) "{{{
     let sub =  vimproc#popen2(a:command)
     let res = ''
     while !sub.stdout.eof
@@ -83,7 +83,7 @@ function! rcUpdate:git:checkout(command) "{{{
     so ~/.vimrc
 endfunction "}}}
 
-function! rcUpdate:git:tag() "{{{
+function! RCUpdate_git_tag() "{{{
     let sub = vimproc#popen2("git tag")
     let res = ''
     while !sub.stdout.eof
@@ -93,7 +93,7 @@ function! rcUpdate:git:tag() "{{{
     return git_tags
 endfunction "}}}
 
-function! rcUpdate:git:branch() "{{{
+function! RCUpdate_git_branch() "{{{
     let sub = vimproc#popen2("git branch -a")
     let res = ''
     while !sub.stdout.eof
@@ -103,9 +103,9 @@ function! rcUpdate:git:branch() "{{{
     return git_branches
 endfunction "}}}
 
-function! rcUpdate:getVersions() "{{{
-    let git_tags = rcUpdate:git:tag()
-    let git_branches = rcUpdate:git:branch()
+function! RCUpdate_getVersions() "{{{
+    let git_tags = RCUpdate_git_tag()
+    let git_branches = RCUpdate_git_branch()
     
     let rc_version = {
     \   'tag': git_tags,
