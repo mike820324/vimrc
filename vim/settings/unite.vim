@@ -13,6 +13,15 @@ call unite#custom#profile('default', 'context', default_context)
 " ==== MENU SETTINGS ==== 
 let g:unite_source_menu_menus = {}
 
+" unite-menu-update {{{
+    let g:unite_source_menu_menus.update = {
+        \ 'description' : 'Auto Update the vimrc'
+    \}
+    let g:unite_source_menu_menus.update.command_candidates = [
+        \['▷ versions                       nomapping',  'Unite rcUpdate'],
+    \]
+"}}}
+
 " unite-menu-git {{{
     let g:unite_source_menu_menus.git = {
         \ 'description' : '<leader> with g in front. Command related to git.'
