@@ -162,3 +162,11 @@ r set g:tagbar_ctags_bin.
 
 >Since I'm using airline powerline theme, and there are some special character in powerline theme. As a result, if you want to use the powerline theme, download the font from https://github.com/powerline/fonts and set up the font in your terminal. After that, the airline should work as what it expeted to be.
 
+* When update to v1.2, my unite file history is gone, what happened??
+
+>The reason is that, in version 1.2, I have change the .cache directory. And as a result, the new vimrc will not load the old cache folder. The way to fix it is pretty simple, the following instructions should fix the issue.
+
+```bash
+cp -R ~/.cache ~/.vim/
+```
+
