@@ -7,4 +7,6 @@ NeoBundle 'osyo-manga/vim-over'           " fast substitude
 NeoBundle 'tpope/vim-commentary'       " quick comment
 NeoBundle 'chrisbra/NrrwRgn'           " NrrRgn
 NeoBundle 'Shougo/neocomplcache'       " neocomplete
+NeoBundle 'Shougo/neosnippet'          " 
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell.vim'

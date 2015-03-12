@@ -54,7 +54,6 @@
     nnoremap <leader>ga :Git add %<CR>
 "}}}
 
-
 " buffertab-navigation {{{
     " create new buffer
     nnoremap <silent><leader>bt :enew<CR>
@@ -88,3 +87,8 @@
     inoremap <expr><C-e> neocomplcache#cancel_popup()
 "}}}
 
+" neosnippet {{{
+    imap <C-k> <Plug>(neosnippet_expand_or_jump)
+    smap <C-k> <Plug>(neosnippet_expand_or_jump)
+    xmap <C-k> <Plug>(neosnippet_expand_target)
+" }}}
