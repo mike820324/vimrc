@@ -1,3 +1,5 @@
+" ======= Autoupdate Plugins =====
+set rtp+=~/.vim/vim/rcUpdate.vim
 " ======= Neobundle Setup =======
 source ~/.vim/vim/neobundles.vim
 
@@ -50,3 +52,4 @@ source ~/.vim/vim/neobundles.vim
 
 " ======== External Plugins Setup =====
 source ~/.vim/vim/setting.vim
+
