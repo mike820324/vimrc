@@ -21,23 +21,21 @@ function! s:source.gather_candidates(args, context) "{{{
         let candidate = {
 \           'word': tag,
 \           'kind': 'common',
-\           'source': 'help',
+\           'source': 'rcUpdate',
 \           'action__command': Fn_tag
 \       }
         call add(candidates, candidate)
     endfor
-    
+   
+    " newest branch
     let Fn_branch = function("RCUpdate_git_checkout_branch")
-    for branch in rc_version.branch
-        let candidate = {
-\           'word': branch,
-\           'kind': 'common',
-\           'source': 'help',
-\           'action__command': Fn_branch
-\       }
-        call add(candidates, candidate)
-        
-    endfor
+    let candidate = {
+\      'word': 'master',
+\      'kind': 'common',
+\      'source': 'rcUpdate',
+\      'action__command': Fn_branch
+\   }
+    call add(candidates, candidate)
 
     return candidates
 endfunction "}}}
