@@ -9,8 +9,13 @@ let s:source = {
 \   'max_candidates': 50,
 \   'required_pattern_length': 0,
 \   'action_table': {},
+\   'hooks': {},
 \   'default_action': {'common': 'execute'}
 \}
+
+function! s:source.hooks.on_init(args, context)"{{{
+    call RCUpdate_git_fetch()
+endfunction"}}}
 
 function! s:source.gather_candidates(args, context) "{{{
     let rc_version = RCUpdate_getVersions()
@@ -42,7 +47,6 @@ endfunction "}}}
 
 " action
 let s:action_table = {}
-
 let s:action_table.execute = {
 \   'description': 'lookup help'
 \}
@@ -55,8 +59,8 @@ endfunction"}}}
 
 let s:source.action_table.common = s:action_table
 
-function! RCUpdate_git_pull() "{{{
-    call vimproc#system_bg("git pull")
+function! RCUpdate_git_fetch() "{{{
+    call vimproc#system("git fetch")
 endfunction "}}}
 
 function! RCUpdate_git_checkout_tag(tag_version) "{{{
@@ -112,4 +116,3 @@ function! RCUpdate_getVersions() "{{{
 
     return rc_version
 endfunction "}}}
-
