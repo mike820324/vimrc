@@ -59,17 +59,27 @@ endfunction"}}}
 
 let s:source.action_table.common = s:action_table
 
+let s:rc_repo = expand('~/.vim/')
+
+function! RCUpdate_git_wrapper(repo_path, options) "{{{
+    let command = 'git -C ' . a:repo_path . ' ' . a:options
+    return command
+endfunction "}}}
+
 function! RCUpdate_git_fetch() "{{{
-    call vimproc#system("git fetch")
+    let command = RCUpdate_git_wrapper(s:rc_repo, 'fetch')
+    call vimproc#system(command)
 endfunction "}}}
 
 function! RCUpdate_git_checkout_tag(tag_version) "{{{
-    let command = "git checkout tags/" . a:tag_version
+    let options = "checkout tags/" . a:tag_version
+    let command = RCUpdate_git_wrapper(s:rc_repo, options)
     call RCUpdate_git_checkout(command)
 endfunction "}}}
 
 function! RCUpdate_git_checkout_branch(branch_name) "{{{
-    let command = "git checkout " . a:branch_name
+    let options = "checkout " . a:branch_name
+    let command = RCUpdate_git_wrapper(s:rc_repo, options)
     call RCUpdate_git_checkout(command)
 endfunction "}}}
 
@@ -86,7 +96,8 @@ function! RCUpdate_git_checkout(command) "{{{
 endfunction "}}}
 
 function! RCUpdate_git_tag() "{{{
-    let sub = vimproc#popen2("git tag")
+    let command = RCUpdate_git_wrapper(s:rc_repo, 'tag')
+    let sub = vimproc#popen2(command)
     let res = ''
     while !sub.stdout.eof
         let res .= sub.stdout.read()
@@ -96,7 +107,8 @@ function! RCUpdate_git_tag() "{{{
 endfunction "}}}
 
 function! RCUpdate_git_branch() "{{{
-    let sub = vimproc#popen2("git branch -a")
+    let command = RCUpdate_git_wrapper(s:rc_repo, 'branch -a')
+    let sub = vimproc#popen2("command")
     let res = ''
     while !sub.stdout.eof
         let res .= sub.stdout.read()
