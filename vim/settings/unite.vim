@@ -18,7 +18,8 @@ let g:unite_source_menu_menus = {}
         \ 'description' : 'Auto Update the vimrc'
     \}
     let g:unite_source_menu_menus.update.command_candidates = [
-        \['▷ versions                       nomapping',  'Unite rcUpdate'],
+        \['▷ editor versions                nomapping',  'Unite rcUpdate'],
+        \['▷ plugin updates                 nomapping',  'NeoBundleCheckUpdate'],
     \]
 "}}}
 
