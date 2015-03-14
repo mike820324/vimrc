@@ -10,7 +10,8 @@ let s:source = {
 \   'required_pattern_length': 0,
 \   'action_table': {},
 \   'hooks': {},
-\   'default_action': {'common': 'execute'}
+\   'default_action': {'word': 'execute'},
+\   'default_kind': 'word'
 \}
 
 function! s:source.hooks.on_init(args, context)"{{{
@@ -23,11 +24,15 @@ function! s:source.gather_candidates(args, context) "{{{
     let candidates = []
     let Fn_tag = function("RCUpdate_git_checkout_tag")
     for tag in rc_version.tag
+        " tag info
+        let info_msg = RCUpdate_get_tag_info(tag)
         let candidate = {
 \           'word': tag,
-\           'kind': 'common',
+\           'is_multiline': 1,
+\           'abbr': info_msg,
+\           'kind': 'word',
 \           'source': 'rcUpdate',
-\           'action__command': Fn_tag
+\           'action__command': Fn_tag,
 \       }
         call add(candidates, candidate)
     endfor
@@ -36,7 +41,7 @@ function! s:source.gather_candidates(args, context) "{{{
     let Fn_branch = function("RCUpdate_git_checkout_branch")
     let candidate = {
 \      'word': 'master',
-\      'kind': 'common',
+\      'kind': 'word',
 \      'source': 'rcUpdate',
 \      'action__command': Fn_branch
 \   }
@@ -45,10 +50,10 @@ function! s:source.gather_candidates(args, context) "{{{
     return candidates
 endfunction "}}}
 
-" action
+" action_tables {{{
 let s:action_table = {}
 let s:action_table.execute = {
-\   'description': 'lookup help'
+\   'description': 'Update to the version'
 \}
 function! s:action_table.execute.func(candidate) "{{{
     let save_ignorecase = &ignorecase
@@ -57,13 +62,32 @@ function! s:action_table.execute.func(candidate) "{{{
     let &ignorecase = save_ignorecase
 endfunction"}}}
 
-let s:source.action_table.common = s:action_table
+let s:action_table.info = {
+\   'description': 'version info'
+\}
+function! s:action_table.info.func(candidate) "{{{ 
+    call RCUpdate_get_tag_info(a:candidate.word)
+endfunction "}}}
 
+let s:source.action_table.common = s:action_table
+" }}}
 let s:rc_repo = expand('~/.vim/')
+
 
 function! RCUpdate_git_wrapper(repo_path, options) "{{{
     let command = 'git -C ' . a:repo_path . ' ' . a:options
     return command
+endfunction "}}}
+
+function! RCUpdate_get_tag_info(tag) "{{{
+    let options = 'tag -l -n9 ' . a:tag
+    let command = RCUpdate_git_wrapper(s:rc_repo, options)
+    let sub = vimproc#popen2(command)
+    let res = ''
+    while !sub.stdout.eof
+        let res .= sub.stdout.read()
+    endwhile
+    return res
 endfunction "}}}
 
 function! RCUpdate_git_fetch() "{{{
