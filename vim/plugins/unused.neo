@@ -1,0 +1,3 @@
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'chrisbra/NrrwRgn'
