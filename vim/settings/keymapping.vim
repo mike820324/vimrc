@@ -12,6 +12,7 @@
     " }}}
     
     " Misc Search {{{
+        nnoremap <silent><leader>ws :Unite window:no-current<CR>
         nnoremap <silent><leader>bs :Unite buffer<CR>
         nnoremap <silent><leader>ms :Unite mark<CR>
         nnoremap <silent><leader>ys :Unite yankround<CR>

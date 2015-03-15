@@ -88,6 +88,7 @@ let g:unite_source_menu_menus = {}
         \['▷ window left                    <leader>wh', 'normal ,wh'],
         \['▷ window right                   <leader>wl', 'normal ,wl'],
         \['▷ window quit                    <leader>wq', 'normal ,wq'],
+        \['▷ window search                  <leader>ws', 'normal ,ws'],
     \]
 " }}}
 
