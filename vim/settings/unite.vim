@@ -1,12 +1,12 @@
 " ==== CONTEXT LAYOUT SETTINGS ====
 let g:default_context = {
-    \ 'winheight': 15,
-    \ 'update_time' : 200,
-    \ 'prompt': '⋙ ',
-    \ 'enable_start_insert' : 0,
-    \ 'marked_icon' : '✔ ',
-    \ 'ignorecase' : 1,
-    \ 'smartcase' : 1,
+    \ 'winheight'           : 15   ,
+    \ 'update_time'         : 200  ,
+    \ 'prompt'              : '⋙ ' ,
+    \ 'enable_start_insert' : 0    ,
+    \ 'marked_icon'         : '✔ ' ,
+    \ 'ignorecase'          : 1    ,
+    \ 'smartcase'           : 1    ,
 \ }
 call unite#custom#profile('default', 'context', default_context)
 
