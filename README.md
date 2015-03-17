@@ -123,6 +123,7 @@ Except the file search, I also mapped some useful functionalities in Unite.vim.
 ```
 key: ,ms  (marks search)
 key: ,bs  (buffer search)
+key: ,ws  (window search)
 key: ,tcs (function search)
 ```
 
