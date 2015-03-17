@@ -1,3 +1,10 @@
-NeoBundle 'bling/vim-airline'            " status line prettify 
-NeoBundle 'Yggdroot/indentLine'        " indent indicator
-NeoBundle 'Lokaltog/vim-distinguished'
+NeoBundle 'bling/vim-airline'                " status line prettify
+NeoBundle 'Yggdroot/indentLine'              " indent indicator
+NeoBundle 'yonchu/accelerated-smooth-scroll' " smooth scrool for vim
+NeoBundle 'ujihisa/unite-colorscheme'        " choose colorscheme
+
+" colorscheme-pack {{{
+    NeoBundle 'Lokaltog/vim-distinguished'
+    NeoBundle 'chriskempson/vim-tomorrow-theme'
+"}}}
+

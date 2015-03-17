@@ -25,7 +25,7 @@ source ~/.vim/vim/neobundles.vim
 " colorscheme-setting {{{
     syntax on
     set background=dark
-    colorscheme distinguished
+    colorscheme Tomorrow-Night-Eighties
 " }}}
 
 " indent-setting {{{
