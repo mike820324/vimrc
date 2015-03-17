@@ -1,11 +1,21 @@
 " plugin for productive of writing code
-NeoBundle 'mbbill/undotree'               " undotree explorer
-NeoBundle 'tpope/vim-fugitive'           " git binding
-NeoBundle 'jmcantrell/vim-virtualenv'  " virtualenv for python
-NeoBundle 'LeafCage/yankround.vim'       " yank reuse
-NeoBundle 'osyo-manga/vim-over'           " fast substitude
-NeoBundle 'tpope/vim-commentary'       " quick comment
-NeoBundle 'Shougo/neocomplcache'       " neocomplete
-NeoBundle 'Shougo/neosnippet'          " snippets
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimshell.vim'
+" general-productive {{{
+    NeoBundle 'mbbill/undotree'            " undotree explorer
+    NeoBundle 'tpope/vim-fugitive'         " git binding
+    NeoBundle 'LeafCage/yankround.vim'     " yank reuse
+    NeoBundle 'osyo-manga/vim-over'        " fast substitude
+    NeoBundle 'tpope/vim-commentary'       " quick comment
+    NeoBundle 'Shougo/neocomplcache'       " neocomplete
+    NeoBundle 'Shougo/neosnippet'          " snippets support
+    NeoBundle 'Shougo/neosnippet-snippets' " snippets data
+    NeoBundle 'Shougo/vimshell.vim'        " open shell in vim
+    NeoBundle 'godlygeek/tabular'          " linuup text
+" }}}
+
+" python {{{
+    NeoBundleLazy 'jmcantrell/vim-virtualenv', { 
+\      'autoload' : {
+\          'filetypes' : 'python'
+\      }
+\   }
+"}}}
