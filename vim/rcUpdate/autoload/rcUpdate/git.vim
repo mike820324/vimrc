@@ -13,8 +13,8 @@ function! rcUpdate#git#Version() "{{{
     return git_version
 endfunction "}}}
 
-function! rcUpdate#git#Tag_info(tag) "{{{
-    let options = 'tag -l -n9 ' . a:tag
+function! rcUpdate#git#Tag_info(tag, verbose) "{{{
+    let options = 'tag -l -n1 ' . a:tag
     let command = rcUpdate#helper#Command_wrapper(s:rc_repo, options)
     let sub = vimproc#popen2(command)
     let res = ''
