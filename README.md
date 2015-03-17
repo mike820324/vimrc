@@ -5,8 +5,8 @@ If you encounter some problems, please refer to the Q&A sections. And if the Q&A
 
 # Outline:
 * [Installation](#InstallSection)
- * ![First Time](#FirstTimeSection) 
- * ![Update](#UpdateSection)
+ * [First Time](#FirstTimeInstallSection) 
+ * [Update](#UpdateInstallSection)
 * [Feature](#FeatureSection)
  * [Help](#HelpSection)
  * [Project Layout](#ProjectLayoutSection)
@@ -22,13 +22,6 @@ The following is the installation guide of how to setup the settings
 cd ~
 git clone https://github.com/mike820324/vimrc.git .vim
 ln -s ~/.vim/vimrc ~/.vimrc
-
-# install neobundle
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-
-# or manually
-mkdir -p ~/.vim/bundle
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 OR
 
@@ -42,16 +35,25 @@ wget https://github.com/mike820324/vimrc/archive/v1.0.tar.gz
 tar xvf v1.0.tar.gz
 mv vimrc-1.0 ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
-
-# install neobundle
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-
 ```
+>I'm using neobundle as my plugin manager, if someone is using other plugin manager such as vundle, just modify the vim/neobundles.vim 
+and vim/plugins folders.
+
 #### <a name="UpdateInstallSection"></a> Update
-To the lastest version:
+From version 1.3, I have added the autoupdate feature to the configuration files.
+Just type ```<leader>,``` and choose the update sections, you will see the avaliable version of this vimrc.
+
+
+If you prefer manually update, and you are familiar with git command, the following instructions should help.
 ```bash
 cd ~/.vim
-git pull
+git fetch
+
+# to latest version
+git checkout origin/master
+
+# to specific version
+git checkout vX.Y
 ```
 
 # <a name="FeatureSection"></a> Features:
@@ -112,14 +114,15 @@ key: ,fg (file grep search)
 ## <a name="MiscSearchSection"></a> Misc Search
 #### Description:
 Except the file search, I also mapped some useful functionalities in Unite.vim.
-* mark search : search through the vim marks currently added
-* buffer search : search through all the buffers
-* tag search : search the tag, very similar to tagbar but much more faster when you know the function name.
+* mark search   : search through the vim marks currently added.
+* buffer search : search through all the buffers.
+* window search : search through windows.
+* tag search    : search the tag, very similar to tagbar but much more faster when you know the function name.
 
 #### KeyMappings:
 ```
-key: ,ms (marks search)
-key: ,bs (buffer search)
+key: ,ms  (marks search)
+key: ,bs  (buffer search)
 key: ,tcs (function search)
 ```
 
@@ -146,6 +149,7 @@ key: ,wj (move to bottom window)
 key: ,wk (move to upper window)
 key: ,wh (move to left window)
 key: ,wl (move to right window)
+key: ,ws (search the window)
 ```
 
 ## <a name="QandASection"></a> Q&A
