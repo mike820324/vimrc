@@ -76,9 +76,9 @@ key: ,, (Fast Command Menu)
 ## <a name="ProjectLayoutSection"></a> Project Layout
 #### Description:
 A Project layout related commands use the following plugins:
-* VimFiler : Project Directory Layout
-* TagBar : Source Code Layout
-* UndoTree : vim undo tree layout
+* VimFiler  : Project Directory Layout
+* TagBar    : Source Code Layout
+* UndoTree  : vim undo tree layout
 * Syntastic : Syntastic Checker
 
 #### KeyMappings: 
