@@ -56,12 +56,34 @@
 "}}}
 
 " buffertab-navigation {{{
+    function! NextBuffer()
+        bnext
+        if bufname('%') =~ 'vimfiler'
+            call NextBuffer()
+        endif
+
+        if bufname('%') =~ 'vimshell'
+            call NextBuffer()
+        endif
+    endfunction
+
+    function! PrevBuffer()
+        bprev
+        if bufname('%') =~ 'vimfiler'
+            call PrevBuffer()
+        endif
+
+        if bufname('%') =~ 'vimshell'
+            call PrevBuffer()
+        endif
+    endfunction
+
     " create new buffer
     nnoremap <silent><leader>bt :enew<CR>
 
     " next buffer
-    nnoremap <silent><leader>bj :bnext<CR>
-    nnoremap <silent><leader>bk :bprev<CR>
+    nnoremap <silent><leader>bj :call NextBuffer()<CR>
+    nnoremap <silent><leader>bk :call PrevBuffer()<CR>
 
     " close a buffer
     nnoremap <silent><leader>bq :bp <BAR> bd #<CR>
