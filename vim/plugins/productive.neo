@@ -5,7 +5,8 @@
     NeoBundle 'LeafCage/yankround.vim'     " yank reuse
     NeoBundle 'osyo-manga/vim-over'        " fast substitude
     NeoBundle 'tpope/vim-commentary'       " quick comment
-    NeoBundle 'Shougo/neocomplcache'       " neocomplete
+    " NeoBundle 'Shougo/neocomplcache'       " neocomplete
+    NeoBundle 'Shougo/neocomplete.vim'     " neocomplete
     NeoBundle 'Shougo/neosnippet'          " snippets support
     NeoBundle 'Shougo/neosnippet-snippets' " snippets data
     NeoBundle 'Shougo/vimshell.vim'        " open shell in vim
