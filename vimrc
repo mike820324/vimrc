@@ -12,7 +12,6 @@ source ~/.vim/vim/neobundles.vim
     set showcmd
     set cursorline
     set hidden
-    set foldmethod=marker
 " }}}
 
 " encoding-setting {{{
@@ -43,6 +42,13 @@ source ~/.vim/vim/neobundles.vim
     autocmd FileType python setlocal ts=4 sw=4
     autocmd FileType javascript setlocal ts=4 sw=4
     autocmd FileType c setlocal ts=4 sw=4 noexpandtab
+" }}}
+
+" fold-settings {{{
+    set foldmethod=marker
+    autocmd FileType c,cpp setlocal foldmethod=syntax
+    autocmd FileType python setlocal foldmethod=indent
+
 " }}}
 
 " ignore-setting {{{
