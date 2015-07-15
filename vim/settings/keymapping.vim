@@ -56,24 +56,28 @@
 "}}}
 
 " buffertab-navigation {{{
-    function! NextBuffer()
-        bnext
+    function! IsUnwantedBuffer() abort
         if bufname('%') =~ 'vimfiler'
-            call NextBuffer()
+            return 1
         endif
 
         if bufname('%') =~ 'vimshell'
+            return 1
+        endif
+
+        return 0
+    endfunction
+
+    function! NextBuffer()
+        bnext
+        if IsUnwantedBuffer()
             call NextBuffer()
         endif
     endfunction
 
     function! PrevBuffer()
         bprev
-        if bufname('%') =~ 'vimfiler'
-            call PrevBuffer()
-        endif
-
-        if bufname('%') =~ 'vimshell'
+        if IsUnwantedBuffer()
             call PrevBuffer()
         endif
     endfunction
@@ -86,7 +90,7 @@
     nnoremap <silent><leader>bk :call PrevBuffer()<CR>
 
     " close a buffer
-    nnoremap <silent><leader>bq :bp <BAR> bd #<CR>
+    nnoremap <silent><leader>bq :call PrevBuffer() <BAR> bd #<CR>
 " }}}
 
 " window-navigation {{{
