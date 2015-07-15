@@ -56,6 +56,10 @@ source ~/.vim/vim/neobundles.vim
     set wildignore+=*.so,*.exe,*.dll,*.ppt
 " }}}
 
+" additional-filetype-settings {{{
+    autocmd BufNewFile,BufRead *.neo set filetype=vim
+" }}}
+
 " ======== External Plugins Setup =====
 source ~/.vim/vim/setting.vim
 
