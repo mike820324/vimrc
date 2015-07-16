@@ -52,8 +52,11 @@ source ~/.vim/vim/neobundles.vim
 " }}}
 
 " ignore-setting {{{
-    set wildignore=*/tmp/*,*/.git/*,*.log,*.swp,*.zip,*.gz,*.bz2,*.bmp,*.jpg
+    set wildignore=*/tmp/*,*/.git/*
+    set wildignore+=*.log,*.swp,*.zip,*.gz,*.bz2,*.bmp,*.jpg
     set wildignore+=*.so,*.exe,*.dll,*.ppt
+    set wildignore+=*.pyd
+    set wildignore+=*/node_modules/*
 " }}}
 
 " additional-filetype-settings {{{
