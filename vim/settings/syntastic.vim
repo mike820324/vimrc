@@ -1,6 +1,8 @@
+" checker settings
 let g:syntastic_enable_python_checker = 'python'
 let g:syntastic_enable_c_checker = 'clang_check'
-let g:syntastic_enable_javascript_checker = ['flow']
+let g:syntastic_javascript_checkers = ['eslint']
+
 let g:syntastic_auto_jump = 3
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_close = 1
