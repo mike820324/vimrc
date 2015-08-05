@@ -11,6 +11,7 @@
     NeoBundle 'Shougo/neosnippet-snippets' " snippets data
     NeoBundle 'Shougo/vimshell.vim'        " open shell in vim
     NeoBundle 'godlygeek/tabular'          " linuup text
+    NeoBundle 'terryma/vim-multiple-cursors' " multi tab support
 " }}}
 
 " python {{{
