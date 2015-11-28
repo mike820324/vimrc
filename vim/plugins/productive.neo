@@ -1,19 +1,29 @@
 " plugin for productive of writing code
 " general-productive {{{
-    NeoBundle 'mbbill/undotree'            " undotree explorer
-    NeoBundle 'tpope/vim-fugitive'         " git binding
-    NeoBundle 'LeafCage/yankround.vim'     " yank reuse
-    NeoBundle 'osyo-manga/vim-over'        " fast substitude
-    NeoBundle 'tpope/vim-commentary'       " quick comment
-    " NeoBundle 'Shougo/neocomplcache'       " neocomplete
-    NeoBundle 'Shougo/neocomplete.vim'     " neocomplete
-    NeoBundle 'Shougo/neosnippet'          " snippets support
-    NeoBundle 'Shougo/neosnippet-snippets' " snippets data
-    NeoBundle 'Shougo/vimshell.vim'        " open shell in vim
-    NeoBundle 'godlygeek/tabular'          " linuup text
-    NeoBundle 'terryma/vim-multiple-cursors' " multi tab support
-    NeoBundle 'jiangmiao/auto-pairs'       " auto pairs
-    NeoBundle 'christoomey/vim-tmux-navigator' " vim tmux navigator
+    NeoBundle 'tpope/vim-fugitive'              " git binding
+    NeoBundle 'mbbill/undotree'                 " undotree explorer
+    NeoBundle 'LeafCage/yankround.vim'          " yank reuse
+    NeoBundle 'osyo-manga/vim-over'             " fast substitude
+" }}}
+
+" code composing {{{
+    NeoBundle 'godlygeek/tabular'               " lineup text
+    NeoBundle 'terryma/vim-multiple-cursors'    " multi tab support
+    NeoBundle 'jiangmiao/auto-pairs'            " auto pairs
+    NeoBundle 'tpope/vim-commentary'            " quick comment
+" }}}
+
+" auto complete {{{
+    " NeoBundle 'Shougo/neocomplcache'            " neocompletecache
+    NeoBundle 'Shougo/neocomplete.vim'          " neocomplete
+    NeoBundle 'Shougo/neosnippet'               " snippets support
+    NeoBundle 'Shougo/neosnippet-snippets'      " snippets data
+" }}}
+
+" shell intergration plugins {{{
+    NeoBundle 'christoomey/vim-tmux-navigator'  " vim tmux navigator
+    NeoBundle 'benmills/vimux'                  " send input to tmux
+    NeoBundle 'Shougo/vimshell.vim'             " open shell in vim
 " }}}
 
 " python {{{
