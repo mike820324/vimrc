@@ -12,6 +12,7 @@
     NeoBundle 'Shougo/vimshell.vim'        " open shell in vim
     NeoBundle 'godlygeek/tabular'          " linuup text
     NeoBundle 'terryma/vim-multiple-cursors' " multi tab support
+    NeoBundle 'jiangmiao/auto-pairs'       " auto pairs
 " }}}
 
 " python {{{
