@@ -13,6 +13,7 @@
     NeoBundle 'godlygeek/tabular'          " linuup text
     NeoBundle 'terryma/vim-multiple-cursors' " multi tab support
     NeoBundle 'jiangmiao/auto-pairs'       " auto pairs
+    NeoBundle 'christoomey/vim-tmux-navigator' " vim tmux navigator
 " }}}
 
 " python {{{

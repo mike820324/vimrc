@@ -14,9 +14,30 @@ source ~/.vim/vim/neobundles.vim
     set hidden
 " }}}
 
+" term-setting {{{
+    " set term=screen-256color
+    " set t_Co=256
+
+    if &term =~ '256color'
+        " Disable Background Color Erase
+        " This should fix the issue that the colorscheme may not work properly
+        " when using xterm in screen or tmux
+        set t_ut=
+    endif
+
+    if &term =~ '^screen'
+        execute "set t_kP=\e[5;*~"
+        execute "set t_kN=\e[6;*~"
+
+        execute "set <xUp>=\e[1;*A"
+        execute "set <xDown>=\e[1;*B"
+        execute "set <xRight>=\e[1;*C"
+        execute "set <xLeft>=\e[1;*D"
+    endif
+
+" }}}
+
 " encoding-setting {{{
-    set term=screen-256color
-    set t_Co=256
     set termencoding=utf-8
     set encoding=utf-8
 " }}}
