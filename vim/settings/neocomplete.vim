@@ -4,8 +4,8 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#data_dir = expand('~/.vim/.cache/neocomplcache')
 
 " javascript omnifunc
-if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
-autocmd FileType javascript setlocal omnifunc=tern#Complete
+" if !exists('g:neocomplete#force_omni_input_patterns')
+"     let g:neocomplete#force_omni_input_patterns = {}
+" endif
+" let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
+" autocmd FileType javascript setlocal omnifunc=tern#Complete
