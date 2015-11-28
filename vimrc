@@ -15,7 +15,7 @@ source ~/.vim/vim/neobundles.vim
 " }}}
 
 " encoding-setting {{{
-    set term=xterm-256color
+    set term=screen-256color
     set t_Co=256
     set termencoding=utf-8
     set encoding=utf-8
