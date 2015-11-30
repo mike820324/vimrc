@@ -70,6 +70,9 @@ let g:unite_source_menu_menus = {}
         \['▷ popup shell                    nomapping..', ':VimShellPop'],
         \['▷ popup node shell               nomapping..', ':VimShellInteractive --split="split" node'],
         \['▷ popup python shell             nomapping..', ':VimShellInteractive --split="split" python'],
+        \['▷ popup shell with tmux          nomapping..', ':call VimuxOpenRunner()'],
+        \['▷ popup node shell with tmux     nomapping..', ':call VimuxRunCommand("node")'],
+        \['▷ popup python shell with tmux   nomapping..', ':call VimuxRunCommand("python")'],
     \]
 " }}}
 
