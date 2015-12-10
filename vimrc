@@ -63,6 +63,7 @@ source ~/.vim/vim/neobundles.vim
     autocmd FileType python setlocal ts=4 sw=4
     autocmd FileType javascript setlocal ts=4 sw=4
     autocmd FileType c setlocal ts=4 sw=4 noexpandtab
+    autocmd FileType cpp setlocal ts=4 sw=4 noexpandtab
 " }}}
 
 " fold-settings {{{
