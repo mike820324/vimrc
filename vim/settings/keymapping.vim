@@ -65,6 +65,10 @@
             return 1
         endif
 
+        if bufname('%') =~ 'QuickFix'
+            return 1
+        endif
+
         return 0
     endfunction
 
