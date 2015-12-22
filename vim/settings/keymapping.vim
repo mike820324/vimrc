@@ -26,7 +26,7 @@
         nnoremap <silent><leader>tcs :Unite outline<CR>
     " }}}
 "}}}
-"
+
 " linux_tracing {{{
     nnoremap <leader>tls  :<C-u>Unite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(,<Left>
     nnoremap <leader>tlss :<C-u>Unite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(<C-R><C-W>,<CR>
@@ -116,6 +116,13 @@
     inoremap <expr><C-l> neocomplcache#complete_common_string()
     inoremap <expr><C-y> neocomplcache#close_popup()
     inoremap <expr><C-e> neocomplcache#cancel_popup()
+"}}}
+
+" neocomplete {{{ 
+    inoremap <expr><C-g> neocomplete#undo_completion()
+    inoremap <expr><C-l> neocomplete#complete_common_string()
+    inoremap <expr><C-y> neocomplete#close_popup()
+    inoremap <expr><C-e> neocomplete#cancel_popup()
 "}}}
 
 " neosnippet {{{

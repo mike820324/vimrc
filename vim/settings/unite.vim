@@ -114,9 +114,9 @@ let g:unite_source_menu_menus = {}
 
     " use ag instead of the default grep
     if executable('ag')
-        "let g:unite_source_rec_async_command = '""ag --follow --nocolor --nogroup --hidden -g""'
+        let g:unite_source_rec_async_command = ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', '']
         let g:unite_source_grep_command = 'ag'
-        let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --ignore=*.pyc --ignore=*.o --ignore=*.ko'
+        let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
     elseif executable('awk')
         let g:unite_source_grep_command='ack'
         let g:unite_source_grep_default_opts='--no-group --no-color'
