@@ -1,7 +1,11 @@
 " checker settings
-" c and cpp
+" c options
 let g:syntastic_c_checkers = ['clang_check', 'gcc']
+let g:syntastic_c_compiler_options="-std=gnu99"
+
+" cpp options
 let g:syntastic_cpp_checkers=['clang_check', 'gcc']
+let g:syntastic_cpp_compiler_options="-std=c++11"
 
 " shell script
 let g:syntastic_shellcheck_exec="~/.cabal/bin/shellcheck"
@@ -20,4 +24,3 @@ let g:syntastic_warning_symbol  = '⚠ '
 let g:syntastic_style_warning_symbol = '⚠ '
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_style_error_symbol = '✗'
-
