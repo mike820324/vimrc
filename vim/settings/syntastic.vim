@@ -8,8 +8,8 @@ let g:syntastic_cpp_checkers=['clang_check', 'gcc']
 let g:syntastic_cpp_compiler_options="-std=c++11"
 
 " shell script
-let g:syntastic_shellcheck_exec="~/.cabal/bin/shellcheck"
 let g:syntastic_sh_checkers=['shellcheck', 'sh']
+let g:syntastic_sh_shellcheck_exec="~/.cabal/bin/shellcheck"
 
 " other scripting language
 let g:syntastic_python_checkers = ['python']
