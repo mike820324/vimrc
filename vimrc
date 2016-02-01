@@ -18,6 +18,9 @@ source ~/.vim/vim/neobundles.vim
     " set term=screen-256color
     " set t_Co=256
 
+    " do not remove the following line if you are using base16 colorscheme
+    let base16colorspace=256
+
     if &term =~ '256color'
         " Disable Background Color Erase
         " This should fix the issue that the colorscheme may not work properly
@@ -45,7 +48,8 @@ source ~/.vim/vim/neobundles.vim
 " colorscheme-setting {{{
     syntax on
     set background=dark
-    colorscheme Tomorrow-Night-Eighties
+    colorscheme base16-tomorrow
+    " colorscheme base16-solarized
 " }}}
 
 " indent-setting {{{

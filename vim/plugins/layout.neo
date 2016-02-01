@@ -6,7 +6,6 @@ NeoBundle 'ujihisa/unite-colorscheme'        " choose colorscheme
 
 " colorscheme-pack {{{
     NeoBundle 'Lokaltog/vim-distinguished'
-    NeoBundle 'chriskempson/vim-tomorrow-theme'
     NeoBundle 'chriskempson/base16-vim'
 "}}}
 
