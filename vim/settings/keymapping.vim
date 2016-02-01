@@ -45,7 +45,7 @@
 " }}}
 
 " Syntastic-Mapping {{{
-    nnoremap <silent><leader>pce :SyntasticCheck<CR>:Errors<CR>
+    nnoremap <silent><leader>pce :SyntasticCheck<CR>:Unite location_list<CR>
 " }}}
 
 " fguitive {{{

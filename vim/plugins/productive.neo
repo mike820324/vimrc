@@ -4,6 +4,7 @@
     NeoBundle 'mbbill/undotree'                 " undotree explorer
     NeoBundle 'LeafCage/yankround.vim'          " yank reuse
     NeoBundle 'osyo-manga/vim-over'             " fast substitude
+    NeoBundle 'osyo-manga/unite-quickfix'
 " }}}
 
 " code composing {{{
