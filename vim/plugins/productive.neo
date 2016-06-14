@@ -5,6 +5,7 @@
     NeoBundle 'LeafCage/yankround.vim'          " yank reuse
     NeoBundle 'osyo-manga/vim-over'             " fast substitude
     NeoBundle 'osyo-manga/unite-quickfix'
+    NeoBundle 'Konfekt/FastFold'
 " }}}
 
 " code composing {{{
