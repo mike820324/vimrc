@@ -12,7 +12,7 @@ let g:syntastic_sh_checkers=['shellcheck', 'sh']
 let g:syntastic_sh_shellcheck_exec="~/.cabal/bin/shellcheck"
 
 " other scripting language
-let g:syntastic_python_checkers = ['python']
+let g:syntastic_python_checkers = ['flake8', 'pep8']
 let g:syntastic_javascript_checkers = ['eslint']
 
 " general settings

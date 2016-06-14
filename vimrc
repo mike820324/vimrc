@@ -48,8 +48,8 @@ source ~/.vim/vim/neobundles.vim
 " colorscheme-setting {{{
     syntax on
     set background=dark
-    colorscheme base16-tomorrow
-    " colorscheme base16-solarized
+    " colorscheme base16-tomorrow
+    colorscheme base16-solarized
 " }}}
 
 " indent-setting {{{
