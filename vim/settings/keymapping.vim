@@ -111,13 +111,6 @@
     nnoremap <silent>sub :OverCommandLine<CR>%s/<C-r><C-w>//g<Left><Left>
 " }}}
 
-" neocomplcache {{{ 
-    inoremap <expr><C-g> neocomplcache#undo_completion()
-    inoremap <expr><C-l> neocomplcache#complete_common_string()
-    inoremap <expr><C-y> neocomplcache#close_popup()
-    inoremap <expr><C-e> neocomplcache#cancel_popup()
-"}}}
-
 " neocomplete {{{ 
     inoremap <expr><C-g> neocomplete#undo_completion()
     inoremap <expr><C-l> neocomplete#complete_common_string()

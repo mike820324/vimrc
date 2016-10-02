@@ -31,13 +31,3 @@ NeoBundleLazy 'mxw/vim-jsx',
             \       'filetypes':['javascript']
             \   }
             \}
-
-" NeoBundleLazy 'marijnh/tern_for_vim',
-"             \{
-"             \   'autoload':
-"             \   {
-"             \       'filetypes':['javascript']
-"             \   }
-"             \}
-
-" python specific

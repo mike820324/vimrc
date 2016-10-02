@@ -10,13 +10,11 @@
 
 " code composing {{{
     NeoBundle 'godlygeek/tabular'               " lineup text
-    NeoBundle 'terryma/vim-multiple-cursors'    " multi tab support
     NeoBundle 'jiangmiao/auto-pairs'            " auto pairs
     NeoBundle 'tpope/vim-commentary'            " quick comment
 " }}}
 
 " auto complete {{{
-    " NeoBundle 'Shougo/neocomplcache'            " neocompletecache
     NeoBundle 'Shougo/neocomplete.vim'          " neocomplete
     NeoBundle 'Shougo/neosnippet'               " snippets support
     NeoBundle 'Shougo/neosnippet-snippets'      " snippets data
@@ -25,13 +23,4 @@
 " shell intergration plugins {{{
     NeoBundle 'christoomey/vim-tmux-navigator'  " vim tmux navigator
     NeoBundle 'benmills/vimux'                  " send input to tmux
-    NeoBundle 'Shougo/vimshell.vim'             " open shell in vim
 " }}}
-
-" python {{{
-    NeoBundleLazy 'jmcantrell/vim-virtualenv', { 
-\      'autoload' : {
-\          'filetypes' : 'python'
-\      }
-\   }
-"}}}

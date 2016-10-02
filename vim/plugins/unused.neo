@@ -1,6 +1,0 @@
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'chrisbra/NrrwRgn'
-
-" javascript syntax highlighting
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
