@@ -32,10 +32,6 @@
     nnoremap <leader>tlss :<C-u>Unite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(<C-R><C-W>,<CR>
 " }}}
 
-" vimfiler {{{
-    nnoremap <silent><leader>pdt :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-quit<CR>
-" }}}
-
 " TagBar-setting {{{
     nnoremap <silent><leader>pco :TagbarToggle<CR>
 " }}}

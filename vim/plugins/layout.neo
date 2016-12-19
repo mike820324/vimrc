@@ -1,5 +1,0 @@
-NeoBundle 'vim-airline/vim-airline'        " status line prettify
-NeoBundle 'vim-airline/vim-airline-themes' " vim airline theme
-NeoBundle 'Yggdroot/indentLine'            " indent indicator
-NeoBundle 'chriskempson/base16-vim'        " base 16 color scheme
-

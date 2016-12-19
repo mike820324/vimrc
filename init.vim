@@ -1,7 +1,41 @@
-" ======= Autoupdate Plugins =====
-set rtp+=~/.vim/vim/rcUpdate
-" ======= Neobundle Setup =======
-source ~/.vim/vim/neobundles.vim
+if &compatible
+    set nocompatible
+endif
+  
+set runtimepath+=/Users/mike820324/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
+call dein#begin('/Users/mike820324/.config/nvim/bundle/')
+call dein#add('Shougo/dein.vim')
+" general-productive {{{
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('mbbill/undotree')
+    call dein#add('LeafCage/yankround.vim')
+    call dein#add('osyo-manga/vim-over')
+    call dein#add('osyo-manga/unite-quickfix')
+" }}}
+
+" code composing {{{
+    call dein#add('godlygeek/tabular')               " lineup text
+    call dein#add('jiangmiao/auto-pairs')            " auto pairs
+    call dein#add('tpope/vim-commentary')            " quick comment
+" }}}
+
+" layout {{{
+    call dein#add('chriskempson/base16-vim')
+    call dein#add('vim-airline/vim-airline')
+    call dein#add('vim-airline/vim-airline-themes')
+    call dein#add('Yggdroot/indentLine')            " indent indicator
+" }}}
+"
+" code-tracing {{{
+    call dein#add('neomake/neomake')
+    call dein#add('mhinz/vim-grepper')
+" NeoBundle 'majutsushi/tagbar'           " source code navigator
+" NeoBundle 'Shougo/unite-outline'       " source code navigator
+" NeoBundle 'hewes/unite-gtags'           " gtag browser
+" NeoBundle 'tacroe/unite-mark'            " mark browser
+" }}}
+
+call dein#end()
 
 " ======= Genera Settings =======
 " general-setting {{{
@@ -15,8 +49,7 @@ source ~/.vim/vim/neobundles.vim
 " }}}
 
 " term-setting {{{
-    " set term=screen-256color
-    " set t_Co=256
+    set t_Co=256
 
     " do not remove the following line if you are using base16 colorscheme
     let base16colorspace=256
@@ -48,8 +81,7 @@ source ~/.vim/vim/neobundles.vim
 " colorscheme-setting {{{
     syntax on
     set background=dark
-    " colorscheme base16-tomorrow
-    colorscheme base16-solarized
+    colorscheme base16-tomorrow-night
 " }}}
 
 " indent-setting {{{
@@ -90,5 +122,7 @@ source ~/.vim/vim/neobundles.vim
 " }}}
 
 " ======== External Plugins Setup =====
-source ~/.vim/vim/setting.vim
-
+source ~/.config/nvim/vim/settings/keymapping.vim
+source ~/.config/nvim/vim/settings/airline.vim
+source ~/.config/nvim/vim/settings/indentline.vim
+source ~/.config/nvim/vim/settings/undotree.vim
