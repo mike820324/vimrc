@@ -1,16 +1,14 @@
-if &compatible
-    set nocompatible
-endif
-  
-set runtimepath+=/Users/mike820324/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
-call dein#begin('/Users/mike820324/.config/nvim/bundle/')
+set runtimepath+=/home/mike820324/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
+call dein#begin('/home/mike820324/.config/nvim/bundle/')
 call dein#add('Shougo/dein.vim')
 " general-productive {{{
+    call dein#add('tek/proteome.nvim')
     call dein#add('tpope/vim-fugitive')
     call dein#add('mbbill/undotree')
     call dein#add('LeafCage/yankround.vim')
     call dein#add('osyo-manga/vim-over')
-    call dein#add('osyo-manga/unite-quickfix')
+    call dein#add('brooth/far.vim')
+    call dein#add('Shougo/deoplete.nvim')
 " }}}
 
 " code composing {{{
@@ -29,11 +27,12 @@ call dein#add('Shougo/dein.vim')
 " code-tracing {{{
     call dein#add('neomake/neomake')
     call dein#add('mhinz/vim-grepper')
-" NeoBundle 'majutsushi/tagbar'           " source code navigator
-" NeoBundle 'Shougo/unite-outline'       " source code navigator
-" NeoBundle 'hewes/unite-gtags'           " gtag browser
-" NeoBundle 'tacroe/unite-mark'            " mark browser
 " }}}
+
+" tmux integration {{{
+    call dein#add('christoomey/vim-tmux-navigator')  " vim tmux navigator
+    call dein#add('benmills/vimux')                  " send input to tmux
+"}}}
 
 call dein#end()
 
@@ -81,7 +80,11 @@ call dein#end()
 " colorscheme-setting {{{
     syntax on
     set background=dark
-    colorscheme base16-tomorrow-night
+
+    " base16-shell will generate a .vimrc_background for us
+    if filereadable("/home/mike820324/.vimrc_background")
+        source /home/mike820324/.vimrc_background
+    endif
 " }}}
 
 " indent-setting {{{
@@ -117,12 +120,14 @@ call dein#end()
     set wildignore+=*/node_modules/*
 " }}}
 
-" additional-filetype-settings {{{
-    autocmd BufNewFile,BufRead *.neo set filetype=vim
-" }}}
+" ===== External Plugins Setup =====
+source ~/.config/nvim/settings/keymapping.vim
 
-" ======== External Plugins Setup =====
-source ~/.config/nvim/vim/settings/keymapping.vim
-source ~/.config/nvim/vim/settings/airline.vim
-source ~/.config/nvim/vim/settings/indentline.vim
-source ~/.config/nvim/vim/settings/undotree.vim
+" ===== Settings Based on Plugins =====
+source ~/.config/nvim/settings/airline.vim
+source ~/.config/nvim/settings/indentline.vim
+source ~/.config/nvim/settings/undotree.vim
+source ~/.config/nvim/settings/far.vim
+source ~/.config/nvim/settings/vimux.vim
+source ~/.config/nvim/settings/deoplete.vim
+source ~/.config/nvim/settings/neomake.vim
