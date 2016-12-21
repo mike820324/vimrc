@@ -1,5 +1,5 @@
 if has("persistent_undo")
-    set undodir='~/.vim/.cache/undodir/'
+    set undodir=~/.config/nvim/.cache/undodir/
     set undofile
 endif
 
