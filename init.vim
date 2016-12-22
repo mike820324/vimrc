@@ -1,14 +1,12 @@
-set runtimepath+=/home/mike820324/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
-call dein#begin('/home/mike820324/.config/nvim/bundle/')
+set runtimepath+=~/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
+call dein#begin('~/.config/nvim/bundle/')
 call dein#add('Shougo/dein.vim')
 " general-productive {{{
-    call dein#add('tek/proteome.nvim')
-    call dein#add('tpope/vim-fugitive')
-    call dein#add('mbbill/undotree')
-    call dein#add('LeafCage/yankround.vim')
-    call dein#add('osyo-manga/vim-over')
-    call dein#add('brooth/far.vim')
-    call dein#add('Shougo/deoplete.nvim')
+    call dein#add('tpope/vim-fugitive')             " git functionality for vim
+    call dein#add('tek/proteome.nvim')              " multiple project management
+    call dein#add('mbbill/undotree')                " undo tree
+    call dein#add('brooth/far.vim')                 " search and replace for multiple files
+    call dein#add('Shougo/deoplete.nvim')           " async omni complete
 " }}}
 
 " code composing {{{
@@ -18,21 +16,25 @@ call dein#add('Shougo/dein.vim')
 " }}}
 
 " layout {{{
-    call dein#add('chriskempson/base16-vim')
-    call dein#add('vim-airline/vim-airline')
-    call dein#add('vim-airline/vim-airline-themes')
+    call dein#add('chriskempson/base16-vim')        " base16 for vim
+    call dein#add('vim-airline/vim-airline')        " powerline for vim
+    call dein#add('vim-airline/vim-airline-themes') " airline theme
     call dein#add('Yggdroot/indentLine')            " indent indicator
 " }}}
-"
+
 " code-tracing {{{
-    call dein#add('neomake/neomake')
-    call dein#add('mhinz/vim-grepper')
+    call dein#add('neomake/neomake')                " lint and run make task
+    call dein#add('mhinz/vim-grepper')              " async grep code
 " }}}
 
 " tmux integration {{{
     call dein#add('christoomey/vim-tmux-navigator')  " vim tmux navigator
     call dein#add('benmills/vimux')                  " send input to tmux
 "}}}
+
+" misc {{
+    call dein#add('Konfekt/FastFold')                " optimize vim folding method.
+"}}
 
 call dein#end()
 
@@ -83,7 +85,7 @@ call dein#end()
 
     " base16-shell will generate a .vimrc_background for us
     if filereadable("/home/mike820324/.vimrc_background")
-        source /home/mike820324/.vimrc_background
+        source ~/.vimrc_background
     endif
 " }}}
 
@@ -103,6 +105,7 @@ call dein#end()
     autocmd FileType javascript setlocal ts=4 sw=4
     autocmd FileType c setlocal ts=4 sw=4 noexpandtab
     autocmd FileType cpp setlocal ts=4 sw=4 noexpandtab
+    autocmd FileType sh setlocal ts=4 sw=4 noexpandtab
 " }}}
 
 " fold-settings {{{
@@ -120,7 +123,7 @@ call dein#end()
     set wildignore+=*/node_modules/*
 " }}}
 
-" ===== External Plugins Setup =====
+" ===== Keymapping settings =====
 source ~/.config/nvim/settings/keymapping.vim
 
 " ===== Settings Based on Plugins =====

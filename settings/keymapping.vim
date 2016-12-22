@@ -23,27 +23,36 @@
 "}}}
 
 " buffertab-navigation {{{
-    function! IsUnwantedBuffer() abort
-        if bufname('%') =~ 'QuickFix'
-            return 1
-        endif
-
-        return 0
+    function! IsExcludeBuffer() abort
+        for exclude_buf_name in ['man://', 'FAR', 'QuickFix']
+            if bufname('%') =~ exclude_buf_name
+                return 1
+            endif
+        endfor
     endfunction
 
     function! NextBuffer()
         bnext
-        if IsUnwantedBuffer()
+        if IsExcludeBuffer()
             call NextBuffer()
         endif
     endfunction
 
     function! PrevBuffer()
         bprev
-        if IsUnwantedBuffer()
+        if IsExcludeBuffer()
             call PrevBuffer()
         endif
     endfunction
+
+    function! KillBuffer()
+        if IsExcludeBuffer()
+            bdelete! %
+        else
+            bdelete %
+        endif
+    endfunction
+
 
     " create new buffer in normal mode
     nnoremap <silent><leader>bt :enew<CR>
@@ -53,7 +62,8 @@
     nnoremap <silent><leader>bk :call PrevBuffer()<CR>
 
     " close a buffer in normal mode
-    nnoremap <silent><leader>bq :call PrevBuffer() <BAR> bd #<CR>
+    nnoremap <silent><leader>bq :bd %<CR>
+
 
     " create new buffer in terminal buffer mode
     tnoremap <silent><leader>bt <C-\><C-n>:enew<CR>
@@ -63,21 +73,20 @@
     tnoremap <silent><leader>bk <C-\><C-n>:call PrevBuffer()<CR>
 
     " close a buffer in terminal mode
-    tnoremap <silent><leader>bq <C-\><C-n>:call PrevBuffer() <BAR> bd #<CR>
+    tnoremap <silent><leader>bq <C-\><C-n>:bd %<CR>
 " }}}
 
 " window-navigation {{{
     nnoremap <silent><leader>wn <C-w>n
     nnoremap <silent><leader>wj <C-w>j
     nnoremap <silent><leader>wk <C-w>k
-    nnoremap <silent><leader>wh <c-w>h
-    nnoremap <silent><leader>wl <c-w>l
-    nnoremap <silent><leader>wq <c-w>q
+    nnoremap <silent><leader>wh <C-w>h
+    nnoremap <silent><leader>wl <C-w>l
+    nnoremap <silent><leader>wq :call KillBuffer()<CR>
 " }}}
 
-" vim-over-setting {{{
-    nnoremap <silent><leader>s :OverCommandLine<CR>
-    nnoremap <silent>sub :OverCommandLine<CR>%s/<C-r><C-w>//g<Left><Left>
+" Far-setting {{{
+    nnoremap <leader>s :Far <C-r><C-w>  %<Left><Left>
 " }}}
 
 " deoplete {{{ 
