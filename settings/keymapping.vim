@@ -1,3 +1,11 @@
+" accelerated jk {{{
+    nmap j <Plug>(accelerated_jk_gj)
+    nmap k <Plug>(accelerated_jk_gk)
+" }}}
+" open denite menus {{{
+    nnoremap <leader>, :Denite menu -mode=normal<CR>
+" }}}
+
 " linux_tracing {{{
     nnoremap <leader>tls  :<C-u>Unite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(,<Left>
     nnoremap <leader>tlss :<C-u>Unite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(<C-R><C-W>,<CR>
@@ -64,6 +72,9 @@
     " close a buffer in normal mode
     nnoremap <silent><leader>bq :bd %<CR>
 
+    " search buffer using denite
+    nnoremap <silent><leader>bs :Denite buffer<CR>
+
 
     " create new buffer in terminal buffer mode
     tnoremap <silent><leader>bt <C-\><C-n>:enew<CR>
@@ -74,6 +85,7 @@
 
     " close a buffer in terminal mode
     tnoremap <silent><leader>bq <C-\><C-n>:bd %<CR>
+    tnoremap <silent><leader>bs <C-\><C-n>:Denite buffer<CR>
 " }}}
 
 " window-navigation {{{
