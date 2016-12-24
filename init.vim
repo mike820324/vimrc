@@ -1,3 +1,8 @@
+" The python path should be include in the very begeinning
+if filereadable(expand("~/.config/nvim/conf.d/python_path.vim"))
+    source ~/.config/nvim/conf.d/python_path.vim
+endif
+
 " dein plugin related setup {{{
     set runtimepath+=~/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
     call dein#begin('~/.config/nvim/bundle/')
