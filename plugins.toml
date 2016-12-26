@@ -76,6 +76,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'mhinz/vim-grepper'
+on_cmd = 'Grepper'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
@@ -114,4 +115,4 @@ hook_add = '''
 
 [[plugins]]
 repo = 'cespare/vim-toml'
-
+on_ft = 'toml'
