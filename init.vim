@@ -3,9 +3,6 @@ if filereadable(expand("~/.config/nvim/conf.d/python_path.vim"))
     source ~/.config/nvim/conf.d/python_path.vim
 endif
 
-source ~/.config/nvim/settings/default.vim
-source ~/.config/nvim/settings/keymapping.vim
-
 " dein plugin related setup {{{
     set runtimepath+=~/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
     call dein#begin('~/.config/nvim/bundle/')
@@ -18,3 +15,17 @@ source ~/.config/nvim/settings/keymapping.vim
     endif
 " }}}
 
+" Default Settings
+source ~/.config/nvim/settings/default.vim
+" Default Keymappings
+source ~/.config/nvim/settings/keymapping.vim
+
+" Include user speicify settings
+if filereadable(expand("~/.config/nvim/conf.d/user_settings.vim"))
+    source ~/.config/nvim/conf.d/user_settings.vim
+endif
+
+" Include user speicify keymappings
+if filereadable(expand("~/.config/nvim/conf.d/user_keymappings.vim"))
+    source ~/.config/nvim/conf.d/user_keymappings.vim
+endif

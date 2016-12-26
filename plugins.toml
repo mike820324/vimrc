@@ -112,3 +112,6 @@ hook_add = '''
     nmap k <Plug>(accelerated_jk_gk)
 '''
 
+[[plugins]]
+repo = 'cespare/vim-toml'
+
