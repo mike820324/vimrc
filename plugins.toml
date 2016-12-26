@@ -89,6 +89,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+hook_add = '''
+    source ~/.config/nvim/settings/neomru.vim    
+'''
 
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
