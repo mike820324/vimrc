@@ -3,6 +3,9 @@ if filereadable(expand("~/.config/nvim/conf.d/python_path.vim"))
     source ~/.config/nvim/conf.d/python_path.vim
 endif
 
+" We need to set the mapleader here since some of the plugin mapping will use the leader key
+let mapleader=','
+
 " dein plugin related setup {{{
     set runtimepath+=~/.config/nvim/bundle/repos/github.com/Shougo/dein.vim
     call dein#begin('~/.config/nvim/bundle/')

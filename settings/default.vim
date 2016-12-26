@@ -1,5 +1,4 @@
 " general-setting {{{
-    let mapleader=','
     set history=50
     set nu
     set relativenumber
