@@ -17,6 +17,7 @@ endif
 
 " Default Settings
 source ~/.config/nvim/settings/default.vim
+source ~/.config/nvim/settings/netrw.vim
 " Default Keymappings
 source ~/.config/nvim/settings/keymapping.vim
 
