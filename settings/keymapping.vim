@@ -1,34 +1,10 @@
-" accelerated jk {{{
-    nmap j <Plug>(accelerated_jk_gj)
-    nmap k <Plug>(accelerated_jk_gk)
-" }}}
-" open denite menus {{{
-    nnoremap <leader>, :Denite menu -mode=normal<CR>
-" }}}
-
-" linux_tracing {{{
-    nnoremap <leader>tls  :<C-u>Unite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(,<Left>
-    nnoremap <leader>tlss :<C-u>Unite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(<C-R><C-W>,<CR>
+" debug-key-mapping {{{
+    nnoremap <silent><leader>. :so ~/.config/nvim/init.vim<CR>
 " }}}
 
 " TagBar-setting {{{
     nnoremap <silent><leader>pco :TagbarToggle<CR>
 " }}}
-
-" undotree {{{
-    nnoremap <silent><leader>put :UndotreeToggle<CR>
-" }}}
-
-" Syntastic-Mapping {{{
-    nnoremap <silent><leader>pce :SyntasticCheck<CR>:Unite location_list<CR>
-" }}}
-
-" fguitive {{{
-    nnoremap <leader>gs :Gstatus<CR>
-    nnoremap <leader>gc :Gcommit<CR>
-    nnoremap <leader>gd :Gdiff<CR>
-    nnoremap <leader>ga :Git add %<CR>
-"}}}
 
 " buffertab-navigation {{{
     function! IsExcludeBuffer() abort
@@ -97,15 +73,6 @@
     nnoremap <silent><leader>wq :call KillBuffer()<CR>
 " }}}
 
-" Far-setting {{{
-    nnoremap <leader>s :Far <C-r><C-w>  %<Left><Left>
-" }}}
-
-" deoplete {{{ 
-    inoremap <expr><C-g> deoplete#undo_completion()
-    inoremap <expr><C-y> deoplete#close_popup()
-"}}}
-
 " neosnippet {{{
     " imap <C-k> <Plug>(neosnippet_expand_or_jump)
     " smap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -117,6 +84,3 @@
     " \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 " }}}
 
-" debug-key-mapping {{{
-    nnoremap <silent><leader>. :so ~/.config/nvim/init.vim<CR>
-" }}}

@@ -1,0 +1,111 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+    nnoremap <leader>gs :Gstatus<CR>
+    nnoremap <leader>gc :Gcommit<CR>
+    nnoremap <leader>gd :Gdiff<CR>
+    nnoremap <leader>ga :Git add %<CR>
+'''
+
+[[plugins]]
+repo = 'tek/proteome.nvim'
+
+[[plugins]]
+repo = 'mbbill/undotree'
+hook_add = '''
+    source ~/.config/nvim/settings/undotree.vim
+    nnoremap <silent><leader>put :UndotreeToggle<CR>
+'''
+
+[[plugins]]
+repo = 'brooth/far.vim'
+hook_add = '''
+    source ~/.config/nvim/settings/far.vim
+    nnoremap <leader>s :Far <C-r><C-w>  %<Left><Left>
+'''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+    source ~/.config/nvim/settings/deoplete.vim
+    inoremap <expr><C-g> deoplete#undo_completion()
+    inoremap <expr><C-y> deoplete#close_popup()
+'''
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'chriskempson/base16-vim'
+hook_add = '''
+    if filereadable(expand('~/.vimrc_background'))
+        source ~/.vimrc_background
+    endif
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+    source ~/.config/nvim/settings/airline.vim
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+    source ~/.config/nvim/settings/indentline.vim
+'''
+
+[[plugins]]
+repo = 'neomake/neomake'
+hook_add = '''
+    source ~/.config/nvim/settings/neomake.vim
+    nnoremap <silent><leader>pce :Neomake<CR>
+'''
+
+[[plugins]]
+repo = 'mhinz/vim-grepper'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+    source ~/.config/nvim/settings/denite.vim
+    nnoremap <leader>, :Denite menu -mode=normal<CR>
+
+    nnoremap <leader>tls  :<C-u>Denite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(,<Left>
+    nnoremap <leader>tlss :<C-u>Denite grep:. -buffer-name=grep <CR>SYSCALL_DEFINE[0-6]\(<C-R><C-W>,<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
+
+[[plugins]]
+repo = 'benmills/vimux'
+hook_add = '''
+    source ~/.config/nvim/settings/vimux.vim
+'''
+
+[[plugins]]
+repo = 'Konfekt/FastFold'
+
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+hook_add = '''
+    nmap j <Plug>(accelerated_jk_gj)
+    nmap k <Plug>(accelerated_jk_gk)
+'''
+

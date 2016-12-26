@@ -41,11 +41,6 @@
 " colorscheme-setting {{{
     syntax on
     set background=dark
-
-    " base16-shell will generate a .vimrc_background for us
-    if filereadable(expand('~/.vimrc_background'))
-        source ~/.vimrc_background
-    endif
 " }}}
 
 " indent-setting {{{
