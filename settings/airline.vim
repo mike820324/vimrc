@@ -14,5 +14,5 @@ let g:airline#extensions#syntastic#enabled = 1
 " tabline-setting {{{
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#fnamemod = ':t'
-    let g:airline#extensions#tabline#excludes = ['FAR', 'man://']
+    let g:airline#extensions#tabline#excludes = ['FAR', 'man://', 'denite', 'fugitive://', '.git']
 "}}}

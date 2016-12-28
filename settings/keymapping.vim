@@ -8,7 +8,7 @@
 
 " buffertab-navigation {{{
     function! IsExcludeBuffer() abort
-        for exclude_buf_name in ['man://', 'FAR', 'QuickFix']
+        for exclude_buf_name in ['FAR', 'man://', 'denite', 'fugitive://', '.git', 'QuickFix']
             if bufname('%') =~ exclude_buf_name
                 return 1
             endif
@@ -36,7 +36,6 @@
             bdelete %
         endif
     endfunction
-
 
     " create new buffer in normal mode
     nnoremap <silent><leader>bt :enew<CR>
