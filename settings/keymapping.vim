@@ -64,12 +64,20 @@
 " }}}
 
 " window-navigation {{{
+    function! KillWindow()
+        if IsExcludeBuffer()
+            bdelete! %
+        else
+            close
+        endif
+    endfunction
+
     nnoremap <silent><leader>wn <C-w>n
     nnoremap <silent><leader>wj <C-w>j
     nnoremap <silent><leader>wk <C-w>k
     nnoremap <silent><leader>wh <C-w>h
     nnoremap <silent><leader>wl <C-w>l
-    nnoremap <silent><leader>wq :call KillBuffer()<CR>
+    nnoremap <silent><leader>wq :call KillWindow()<CR>
 " }}}
 
 " neosnippet {{{
