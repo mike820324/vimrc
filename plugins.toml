@@ -116,3 +116,6 @@ hook_add = '''
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'

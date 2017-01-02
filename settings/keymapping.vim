@@ -8,7 +8,7 @@
 
 " buffertab-navigation {{{
     function! IsExcludeBuffer() abort
-        for exclude_buf_name in ['FAR', 'man://', 'denite', 'fugitive://', '.git', 'QuickFix']
+        for exclude_buf_name in ['FAR', 'man://', 'denite', 'fugitive://', '.git', 'QuickFix', 'undotree']
             if bufname('%') =~ exclude_buf_name
                 return 1
             endif
@@ -16,6 +16,9 @@
     endfunction
 
     function! NextBuffer()
+        if IsExcludeBuffer()
+            return
+        endif
         bnext
         if IsExcludeBuffer()
             call NextBuffer()
@@ -23,6 +26,9 @@
     endfunction
 
     function! PrevBuffer()
+        if IsExcludeBuffer()
+            return
+        endif
         bprev
         if IsExcludeBuffer()
             call PrevBuffer()
@@ -52,6 +58,7 @@
 
 
     " create new buffer in terminal buffer mode
+    tnoremap <Esc> <C-\><C-n>
     tnoremap <silent><leader>bt <C-\><C-n>:enew<CR>
 
     " goto next buffer in terminal mode

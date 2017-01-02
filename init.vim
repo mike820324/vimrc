@@ -20,7 +20,10 @@ let mapleader=','
 
 " Default Settings
 source ~/.config/nvim/settings/default.vim
+
+" Some netrw settings that is a bit more like nerdtree.
 source ~/.config/nvim/settings/netrw.vim
+
 " Default Keymappings
 source ~/.config/nvim/settings/keymapping.vim
 
